@@ -1,0 +1,16 @@
+@(title: String)
+
+<html>
+    <head>
+        <title>@title</title>
+        <script src="@routes.WebJarAssets.at(WebJarAssets.locate("angular.min.js"))"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular-route.js"></script>
+        <script src="@routes.Assets.at("/app.js")"></script>
+        <script src="@routes.Assets.at("controller/friendsController.js")"></script>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="friendsController">
+            {{name}}
+        </div>
+    </body>
+</html>
