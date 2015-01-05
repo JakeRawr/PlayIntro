@@ -8,6 +8,7 @@ scalaVersion := "2.11.1"
 
 libraryDependencies ++= Seq(
   "org.webjars" %% "webjars-play" % "2.3.0-2",
+  "org.webjars" % "angular-ui-router" % "0.2.13",
   "org.webjars" % "angularjs" % "1.3.8",
   "org.webjars" % "bootstrap" % "2.3.2",
   jdbc,

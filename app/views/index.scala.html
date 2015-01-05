@@ -3,14 +3,27 @@
 <html>
     <head>
         <title>@title</title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script src="@routes.WebJarAssets.at(WebJarAssets.locate("angular.min.js"))"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular-route.js"></script>
         <script src="@routes.Assets.at("/app.js")"></script>
         <script src="@routes.Assets.at("controller/friendsController.js")"></script>
     </head>
-    <body ng-app="myApp">
-        <div ng-controller="friendsController">
-            {{name}}
+    <body ng-app="myApp" ng-controller="friendsController">
+        <h1>My Friend List</h1>
+        <div class="jumbotron">
+            <input id="friendInput" ng-model="friend" type="text">
+            <button ng-click="addFriend(friend)">Add</button>
+        </div>
+        <div id="deleted" ng-if="deletedFlag">Deleted: {{deleted}}</div>
+        <div>
+            <div class="row">
+                <div ng-click="deleteFriend(friend)" class="col-sm-4" ng-repeat="friend in friendList">
+                    <h3>{{friend}}</h3>
+                </div>
+            </div>
         </div>
     </body>
 </html>

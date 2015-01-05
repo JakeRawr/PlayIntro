@@ -1,0 +1,17 @@
+#friendInput {
+    margin-left: 30%;
+    height: 5%;
+    width: 40%;
+}
+
+.col-sm-4 {
+    background-color: darkgray;
+    border-style: solid;
+    border-color: black;
+}
+
+#deleted {
+    margin-left: 45%;
+    color: red;
+    font-size: 30px;
+}
